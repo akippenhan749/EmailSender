@@ -28,9 +28,10 @@ usage: send_email.py [-h] [--log-file LOG_FILE] {message,test} ...
 
 positional arguments:
   {message,test}
-    message            Send an email with recipient(s), a subject and a body specified on the command line or from a
-                       file with one or more optional email attachments specified from the command line. A secrets file
-                       must also be specified.
+    message            Send an email with recipient(s), a subject and a body specified on the
+                       command line or from a file with one or more optional email 
+                       attachments specified from the command line. A secrets file must also 
+                       be specified.
     test               Send a test email with an optional test attachment.
 
 options:
@@ -43,15 +44,18 @@ options:
 The `message` argument allows for an email to be sent using command line options. Usage instructions for this argument are as follows:
 
 ```
-usage: send_email.py message [-h] [-f FILE] [--recipients RECIPIENTS [RECIPIENTS ...]] [--subject SUBJECT]
-                             [--body BODY] [--attachments ATTACHMENTS [ATTACHMENTS ...]] --secrets-file SECRETS_FILE
-                             [--username-tag USERNAME_TAG] [--password-tag PASSWORD_TAG]
+usage: send_email.py message [-h] [-f FILE] [--recipients RECIPIENTS [RECIPIENTS ...]] 
+                             [--subject SUBJECT]
+                             [--body BODY] [--attachments ATTACHMENTS [ATTACHMENTS ...]] 
+                             --secrets-file SECRETS_FILE [--username-tag USERNAME_TAG] 
+                             [--password-tag PASSWORD_TAG]
 
 options:
   -h, --help            Show this help message and exit.
-  -f FILE, --file FILE  Read email recipients, subject and body from a file. The first line of the file will be
-                        interpreted as the email recipients (comma separated), the second line as the email subject
-                        and the remaining file contents will be interpreted as the email body.
+  -f FILE, --file FILE  Read email recipients, subject and body from a file. The first line of
+                        the file will be interpreted as the email recipients (comma separated),
+                        the second line as the email subject and the remaining file contents
+                        will be interpreted as the email body.
   --recipients RECIPIENTS [RECIPIENTS ...]
                         The email address(es) to send the email to.
   --subject SUBJECT     The subject of the email to send.
@@ -61,9 +65,11 @@ options:
   --secrets-file SECRETS_FILE
                         The file containing credentials for the email sender.
   --username-tag USERNAME_TAG
-                        The tag for the email username in the secrets file. Defaults to 'gmail_username'.
+                        The tag for the email username in the secrets file. Defaults to 
+                        'gmail_username'.
   --password-tag PASSWORD_TAG
-                        The tag for the email username in the secrets file. Defaults to 'gmail_password'.
+                        The tag for the email username in the secrets file. Defaults to 
+                        'gmail_password'.
 ```
 
 ### Sending a Test Email
@@ -79,9 +85,11 @@ options:
   --secrets-file SECRETS_FILE
                         The file containing credentials for the email sender.
   --username-tag USERNAME_TAG
-                        The tag for the email username in the secrets file. Defaults to 'gmail_username'.
+                        The tag for the email username in the secrets file. Defaults to 
+                        'gmail_username'.
   --password-tag PASSWORD_TAG
-                        The tag for the email username in the secrets file. Defaults to 'gmail_password'.
+                        The tag for the email username in the secrets file. Defaults to 
+                        'gmail_password'.
   --include-attachment  Include a simple test attachment in the test email.
 ```
 
