@@ -52,8 +52,8 @@ usage: send_email.py message [-h] [-f FILE] [--recipients RECIPIENTS [RECIPIENTS
 
 options:
   -h, --help            Show this help message and exit.
-  -f FILE, --file FILE  Read email recipients, subject and body from a file. The first line of
-                        the file will be interpreted as the email recipients (comma
+  -f FILE, --file FILE  Read email recipients, subject and body from a file. The first line
+                        of the file will be interpreted as the email recipients (comma
                         separated), the second line as the email subject and the remaining
                         file contents will be interpreted as the email body.
   --recipients RECIPIENTS [RECIPIENTS ...]
