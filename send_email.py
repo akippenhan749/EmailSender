@@ -348,15 +348,6 @@ if __name__ == "__main__":
 
     lg = CustomLogger(log_file)
 
-    if args.option == "test":
-        test_send_email(
-            secrets_file=args.secrets_file,
-            username_tag=args.username_tag,
-            password_tag=args.password_tag,
-            log_file=log_file,
-            include_attachment=args.include_attachment,
-        )
-
     if args.option == "message":
         lg.info("====== INITIALIZING... ======")
         if not args.file and not args.recipients:
@@ -387,3 +378,12 @@ if __name__ == "__main__":
             attachments=args.attachments,
         )
         lg.info("====== TERMINATED ======")
+
+    if args.option == "test":
+        test_send_email(
+            secrets_file=args.secrets_file,
+            username_tag=args.username_tag,
+            password_tag=args.password_tag,
+            log_file=log_file,
+            include_attachment=args.include_attachment,
+        )
