@@ -52,6 +52,10 @@ def get_secrets(
     lg = CustomLogger(log_file)
     lg.info(f"Loading secrets for '{username_tag}' from '{secrets_file}'...")
 
+    if not isfile(secrets_file):
+        lg.error(f"File '{secrets_file}' does not exist!")
+        raise Exception(f"File '{secrets_file}' does not exist!")
+
     username = password = ""
     with open(secrets_file, "r") as f:
         for line in f:
